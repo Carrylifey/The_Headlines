@@ -6,18 +6,18 @@ import { auth } from "./Firebase";
 
 const Navbar = () => {
   return (
-    <nav className="bg-gray-800 p-4">
+    <nav className="bg-pink-800 p-4">
       <div className="container mx-auto flex items-center justify-between">
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 font-bold">
           <Link
             to="/"
-            className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm"
+            className="text-white hover:text-cyan-300 px-3 py-2 text-lg"
           >
             Home
           </Link>
         </div>
         <div className="flex items-center">
-          <Link to="/" className="text-white text-lg font-bold">
+          <Link to="/" className="text-white text-2xl font-bold">
             The Headlines
           </Link>
         </div>
@@ -28,7 +28,7 @@ const Navbar = () => {
                 <>
                   <button
                     onClick={() => signOut(auth)}
-                    className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm"
+                    className="text-white hover:text-gray-300 px-3 py-2  text-lg"
                   >
                     Sign Out
                   </button>
@@ -37,13 +37,13 @@ const Navbar = () => {
                 <>
                   <Link
                     to="/login"
-                    className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm"
+                    className="text-white hover:text-gray-300 px-3 py-2  text-lg"
                   >
                     Login
                   </Link>
                   <Link
                     to="/signup"
-                    className="text-white hover:bg-gray-700 px-3 py-2 rounded-md text-sm"
+                    className="text-white hover:text-gray-300 px-3 py-2  text-lg"
                   >
                     Signup
                   </Link>

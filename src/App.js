@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "./Navbar";
 import News from "./News";
+import { getNewsFromCache, updateNewsCache } from './CacheService';
 
 const App = () => {
   const [articles, setArticles] = useState([]);
@@ -11,9 +12,13 @@ const App = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
+        const cachedNews = getNewsFromCache();
+        setArticles(cachedNews);
         const response = await axios.get(
           "https://newsapi.org/v2/top-headlines?country=us&apiKey=dcb612d747b446e1a9067158dfabe479"
         );
+        updateNewsCache(response.data.articles);
+        setArticles(response.data.articles);
         console.log(response);
         setArticles(response.data.articles);
       } catch (error) {
@@ -92,7 +97,7 @@ const App = () => {
         )}
         <button
           onClick={toggleView}
-          className="fixed top-56 right-8 bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition"
+          className="fixed top-56 right-8 bg-pink-500 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded transition"
         >
           {isGridView ? "Switch to List View" : "Switch to Grid View"}
         </button>
