@@ -42,7 +42,6 @@ const News = ({ article, onClose }) => {
     }
   };
  
- 
   const closeModal = () => {
     setModalVisible(false);
     onClose();

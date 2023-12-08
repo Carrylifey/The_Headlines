@@ -40,36 +40,6 @@ const App = () => {
     setSelectedArticle(null);
   };
 
-  // return (
-  //   <div >
-  //     <Navbar />
-  //     <div className="flex flex-col items-center justify-center min-h-screen">
-  //       <button
-  //         onClick={toggleView}
-  //         className="ml-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-  //       >
-  //         {isGridView ? "Switch to List View" : "Switch to Grid View"}
-  //       </button>
-  //     </div>
-
-  //     {isGridView ? (
-  //       <div style={{ display: "flex", flexWrap: "wrap" }}>
-  //         {articles.map((article) => (
-  //           <div style={{ width: "50%" }}>
-  //             <NewsDetalis article={article} key={article.title} />
-  //           </div>
-  //         ))}
-  //       </div>
-  //     ) : (
-  //       <ul>
-  //         {articles.map((article) => (
-  //           <NewsDetalis article={article} key={article.title} />
-  //         ))}
-  //       </ul>
-  //     )}
-  //   </div>
-  // );
-
   return (
     <div>
       <Navbar />
