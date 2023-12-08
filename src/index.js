@@ -10,7 +10,7 @@ import Signup from "./Signup";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Router>
+    <Router basename="/The_Headlines">
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/login" element={<Login />} />
