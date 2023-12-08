@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/The_Headlines/static/css/main.5992e0b0.css",
+    "main.js": "/The_Headlines/static/js/main.79a6776e.js",
+    "index.html": "/The_Headlines/index.html",
+    "main.5992e0b0.css.map": "/The_Headlines/static/css/main.5992e0b0.css.map",
+    "main.79a6776e.js.map": "/The_Headlines/static/js/main.79a6776e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5992e0b0.css",
+    "static/js/main.79a6776e.js"
+  ]
+}
